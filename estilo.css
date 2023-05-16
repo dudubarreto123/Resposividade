@@ -1,0 +1,133 @@
+*{
+    padding: 0 0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+header{
+    background-color: aqua;
+    padding: 10px;
+    width: 100%;
+}
+
+footer{
+    background-color: aqua;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.menu-hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    width: 35px;
+    height: 10px;
+    background-color: black;
+    margin: 10px;
+    box-shadow: 2px 2px 2px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu li a {
+    color:black;
+    text-decoration: none;
+    padding: 50px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.footer{
+    display: flex;
+    list-style: none;
+}
+
+.footer li a{
+    color: blue;
+    padding: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2rem;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    /* card: espaçamento entre imegens */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    background: #f1f1f1;
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    margin: batoom 2rem;
+}
+
+.card img {
+    height: 400px;
+}
+
+.card>div {
+    padding: 2rem;
+}
+
+.card:nth-child(even) img {
+    order: 2;
+}
+
+
+.btn {
+    display: inline-flex;
+    background: #000;
+    color: #fff;
+    padding: 0.8rem 1.9rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+
+    .menu-hamburguer{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu.active{
+        display: flex;
+    }
+}
